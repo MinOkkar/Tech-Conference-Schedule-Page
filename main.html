@@ -8,7 +8,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header id="header">
       <div class="header-background"></div>
       <div id="meta-data">
         <p id="time"><time datetime="2026-12-11">December 11, 2026</time></p>
@@ -17,14 +17,14 @@
       <h1>Cybersecurity Conference 2025</h1>
     </header>
     <!-- nav -->
-    <nav id="main-nav">
+    <nav id="main-nav"  aria-label="Main Navigation">
       <div id="sub-nav">
-        <a href="#header">Home</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#sponsors">Sponsors</a>
+        <a href="#header" tabindex="0">Home</a>
+        <a href="#schedule"tabindex="1">Schedule</a>
+        <a href="#speakers" tabindex="2">Speakers</a>
+        <a href="#sponsors" tabindex="3">Sponsors</a>
       </div>
-      <a href="">Register</a>
+      <a href="#register-btn">Register</a>
     </nav>
     <!-- schedule -->
     <main id="schedule-div">
@@ -75,6 +75,7 @@
           <td>Closing Keynote: Cybersecurity in 2030</td>
           <td>Prof. Julia Nguyen (Researcher, National Cyber Lab)</td>
           <td>Main Hall</td>
+          </tr>
         </tbody>
       </table>
     </main>
@@ -83,7 +84,7 @@
       <h2 id="speakers-heading">Speaker Bios</h2>
 
       <article>
-        <img src="Assets/p1.jpg" alt="" />
+        <img src="Assets/p1.jpg" alt="photo of Alice Johnson " />
         <h3>Alice Johnson</h3>
         <p>
           CEO of SecureTech, Alice has 25+ years of experience in building
@@ -92,7 +93,7 @@
       </article>
 
       <article>
-        <img src="Assets/p2.jpg" alt="" />
+        <img src="Assets/p2.jpg" alt="photo of Dr. Alan Smith " />
         <h3>Dr. Alan Smith</h3>
         <p>
           CTO of CyberAI Labs, Dr. Smith specializes in AI-powered threat
@@ -102,7 +103,7 @@
       </article>
 
       <article>
-        <img src="Assets/p4.jpg" alt="" />
+        <img src="Assets/p4.jpg" alt="photo of Sarah Lee" />
         <h3>Sarah Lee</h3>
         <p>
           CISO at Shield Corp., Sarah is an expert in ransomware mitigation and
@@ -112,7 +113,7 @@
       </article>
 
       <article>
-        <img src="Assets/p3.jpg" alt="" />
+        <img src="Assets/p3.jpg" alt="photo of Brian Tan" />
         <h3>Brian Tan</h3>
         <p>
           A certified ethical hacker, Brian conducts workshops worldwide,
@@ -122,7 +123,7 @@
       </article>
 
       <article>
-        <img src="Assets/p5.png" alt="" />
+        <img src="Assets/p5.png" alt="photo of Prof. Julia Nguyen" />
         <h3>Prof. Julia Nguyen</h3>
         <p>
           A leading researcher in cybersecurity policy, Prof. Nguyen works on
@@ -135,35 +136,56 @@
     <section id="sponsors">
       <h2>Our Sponsors</h2>
       <div id="sponsers-div">
-        <article>
-          <img src="Assets/sponsor-1.png" alt="" />
+        <aside>
+          <img src="Assets/sponsor-1.png" alt="logo of CyberShield Technologies" />
           <h3>CyberShield Technologies</h3>
           <p>
             A global leader in endpoint protection and advanced threat
             management.
           </p>
-          <a href=""><p>Detail</p></a>
-        </article>
-        <article>
-          <img src="Assets/sponsor-1.png" alt="" />
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"
+            ><p>Detail</p></a
+          >
+        </aside>
+        <aside>
+          <img src="Assets/sponsor-2.png" alt="logo of HackSecure Solutions" />
           <h3>HackSecure Solutions</h3>
           <p>
             Providing penetration testing tools for businesses and governments
             worldwide.
           </p>
-          <a href=""><p>Detail</p></a>
-        </article>
-        <article>
-          <img src="Assets/sponsor-1.png" alt="" />
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"
+            ><p>Detail</p></a
+          >
+        </aside>
+        <aside>
+          <img src="Assets/sponsor-3.png" alt="logo of DataSafe International" />
           <h3>DataSafe International</h3>
           <p>
             A trusted provider of secure data storage and disaster recovery
             services.
           </p>
-          <a href=""><p>Detail</p></a>
-        </article>
+          <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"
+            ><p>Detail</p></a
+          >
+        </aside>
       </div>
     </section>
-    <a href="register.html" id="register-btn">Register Now</a>
+    <!-- register -->
+    <a href="register.html" id="register-btn" aria-label="Register Now">Register Now</a>
+
+    <!-- footer -->
+    <footer role="contentinfo">
+      <p>&copy; 2025 Cybersecurity Conference</p>
+      <ul>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+      </ul>
+      <p>
+        Contact us at
+        <a href="mailto:contact@cybercon2025.org">contact@cybercon2025.org</a>
+      </p>
+    </footer>
   </body>
 </html>

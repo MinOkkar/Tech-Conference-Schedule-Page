@@ -151,6 +151,7 @@ caption {
 /* sponsers */
 
 #sponsors {
+  scroll-margin-top: 100px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -162,11 +163,13 @@ caption {
 #sponsers-div {
   display: flex;
   padding: 20px;
+  align-items: center;
 }
 
-#sponsers-div article {
+#sponsers-div aside {
   border: solid 0.5px black;
   padding: 10px;
+  margin: 10px;
 }
 
 #sponsers-div a {
@@ -198,6 +201,35 @@ caption {
   border: #000000 0.5px solid;
   background-color: white;
   color: blue;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(1, 102, 255, 0.211);
+  height: 100px;
+  align-items: center;
+  padding: 20px;
+}
+footer ul {
+  display: flex;
+  list-style-type: none;
+}
+footer li {
+  background-color: blue;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+footer li:hover {
+  transform: scale(1.6);
+}
+footer li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {
