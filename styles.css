@@ -1,15 +1,19 @@
 :root {
+  --blue: rgb(0, 0, 255);
+  --white: rgb(255, 255, 255);
+  --border: rgb(0, 0, 0);
+  --blue-transparent: rgba(1, 102, 255, 0.211);
 }
 
 body {
   margin: 1px;
   display: grid;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
 }
 
 header {
   text-align: center;
-  color: blue;
+  color: var(--blue);
   padding-top: 30px;
 }
 
@@ -45,7 +49,7 @@ h2 {
   display: flex;
   justify-content: center;
   margin-top: 0px;
-  background-color: rgba(1, 102, 255, 0.211);
+  background-color: var(--blue-transparent);
   backdrop-filter: blur(10px);
 }
 
@@ -55,14 +59,14 @@ h2 {
   text-decoration: none;
   font-size: 1rem;
   transition: 0.3s ease-in-out;
-  background-color: blue;
+  background-color: var(--blue);
   padding: 10px;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   font-size: 1.5rem;
 }
 #main-nav a:hover {
-  background-color: white;
-  color: blue;
+  background-color: var(--white);
+  color: var(--blue);
 }
 
 #sub-nav {
@@ -92,7 +96,7 @@ caption {
 table,
 th,
 td {
-  border: 0.5px solid #000000;
+  border: 0.5px solid var(--border);
 }
 
 th,
@@ -102,7 +106,7 @@ td {
 }
 
 th {
-  background-color: rgba(1, 102, 255, 0.211);
+  background-color: var(--blue-transparent);
 }
 
 caption {
@@ -116,7 +120,7 @@ caption {
 #speakers {
   display: flex;
   flex-direction: column;
-  border: #000000 0.5px solid;
+  border: var(--border) 0.5px solid;
   padding: 0px;
   margin: 100px;
   scroll-margin-top: 100px;
@@ -124,15 +128,15 @@ caption {
 
 #speakers article {
   margin: 20px;
-  border-bottom: #000000 0.5px solid;
+  border-bottom: var(--border) 0.5px solid;
 }
 
 #speakers-heading {
-  background-color: rgba(1, 102, 255, 0.211);
+  background-color: var(--blue-transparent);
   padding: 10px;
   margin-top: 0px;
   text-align: center;
-  border-bottom: #000000 0.5px solid;
+  border-bottom: var(--border) 0.5px solid;
 }
 
 #speakers img {
@@ -145,7 +149,7 @@ caption {
   margin-left: 10px;
   padding: 10px;
   font-size: 2rem;
-  color: blue;
+  color: var(--blue);
 }
 
 /* sponsers */
@@ -170,16 +174,17 @@ caption {
   border: solid 0.5px black;
   padding: 10px;
   margin: 10px;
+  min-height: 700px;
 }
 
 #sponsers-div a {
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: var(--white);
 }
 
 #sponsers-div a p {
-  background-color: blue;
+  background-color: var(--blue);
   height: 20px;
   padding: 10px;
 }
@@ -188,8 +193,8 @@ caption {
   place-self: center;
   font-size: 3rem;
   text-decoration: none;
-  background-color: blue;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
   margin: 100px;
   padding: 20px;
   border-radius: 10%;
@@ -198,9 +203,9 @@ caption {
 
 #register-btn:hover {
   transform: scale(1.2);
-  border: #000000 0.5px solid;
-  background-color: white;
-  color: blue;
+  border: var(--border) 0.5px solid;
+  background-color: var(--white);
+  color: var(--blue);
 }
 
 /* footer */
@@ -208,7 +213,7 @@ caption {
 footer {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(1, 102, 255, 0.211);
+  background-color: var(--blue-transparent);
   height: 100px;
   align-items: center;
   padding: 20px;
@@ -218,7 +223,7 @@ footer ul {
   list-style-type: none;
 }
 footer li {
-  background-color: blue;
+  background-color: var(--blue);
   padding: 10px;
   margin: 10px;
   transition: 0.3s ease-in-out;
@@ -229,9 +234,23 @@ footer li:hover {
 footer li a {
   text-decoration: none;
   list-style-type: none;
-  color: white;
+  color: var(--white);
 }
 
+/* scrolls */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blue-transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+/* media querry */
 @media screen and (max-width: 800px) {
   #sponsers-div {
     flex-direction: column;
